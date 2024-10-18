@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registro - Reconhecimento Facial</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='styles.css') }}"
+    />
+    <script
+      defer
+      src="{{ url_for('static', filename='register.js') }}"
+    ></script>
+  </head>
+  <body>
+    <header>
+      <div class="logo">Tech<span class="span01">no</span></div>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="#">Pages</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="icons">
+        <a href="{{ url_for('login_page') }}" class="btn-login">Login</a>
+      </div>
+      <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
+    </header>
+    <main>
+      <div class="register-container">
+        <h2>Registro</h2>
+        <form id="registerForm" method="POST" action="/register">
+          <div class="input-field">
+            <label for="username">Usuário</label>
+            <input type="text" id="username" name="username" required />
+          </div>
+          <div class="input-field">
+            <label for="password">Senha</label>
+            <input type="password" id="password" name="password" required />
+          </div>
+          <!-- Campo oculto para imagem capturada -->
+          <input type="hidden" id="image" name="image" />
+          <button type="submit" class="btn-face">Registrar</button>
+        </form>
+        <button
+          id="faceRegisterButton"
+          class="btn-face"
+          onclick="startFaceRegistration()"
+        >
+          Registrar com Reconhecimento Facial
+        </button>
+        <div id="camera" class="camera">
+          <video id="video" width="320" height="240" autoplay></video>
+          <canvas id="canvas" style="display: none"></canvas>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

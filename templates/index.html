@@ -1,0 +1,249 @@
+<!-- templates/index.html -->
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Página Principal</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='styles.css') }}"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!--Cabeçalho-->
+    <header>
+      <div class="logo">
+        <h2>Shalom<span class="span01">Group</span></h2>
+      </div>
+      <nav>
+        <ul class="nav-links">
+          <li><a>Home</a></li>
+          <li><a>Servics</a></li>
+          <li><a>Pages</a></li>
+          <li><a>Contact</a></li>
+        </ul>
+      </nav>
+      <div class="icons">
+        <a href="/logout" class="btn-logout">Logout</a>
+      </div>
+    </header>
+
+    <!--Hero-->
+    <section class="hero">
+      <div class="hero-content">
+        <div class="hero-text">
+          <h1>Clínica Shalom, onde sua saúde é <span>muito precisosa</span></h1>
+          <p>
+            Na clínica Shalom, somos uma referência em Medicina Ocupacional,
+            contando com uma equipe altamente qualificada e comprometida em
+            promover a saúde e segurança dos trabalhadores.
+          </p>
+          <a href="#" class="btn-hero">Conheça Mais</a>
+        </div>
+        <div class="hero-image">
+          <img
+            src="{{ url_for('static', filename='img/home.svg')}}"
+            alt="home-img"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!--Cards-->
+    <section class="cards-container">
+      <!--Card 01-->
+      <div class="card">
+        <span class="span-overlay"></span>
+        <i class="fa-solid fa-stethoscope"></i>
+        <h3>Check-up Profissional</h3>
+        <p>Mantenha-se saudável no trabalho</p>
+      </div>
+      <!--Card 02-->
+      <div class="card">
+        <span class="span-overlay"></span>
+        <i class="fa-solid fa-briefcase-medical"></i>
+        <h3>Exames ocupacionais</h3>
+        <p>Cuide da sua saúde laboral</p>
+      </div>
+      <!--Card 03-->
+      <div class="card">
+        <span class="span-overlay"></span>
+        <i class="fa-solid fa-heart-pulse"></i>
+        <h3>Bem estar o trabalho</h3>
+        <p>Promovendo saúde e segurança!</p>
+      </div>
+      <!--Card 04-->
+      <div class="card">
+        <span class="span-overlay"></span>
+        <i class="fa-solid fa-person-running"></i>
+        <h3>Vida Ativa Profissional</h3>
+        <p>Promovendo saúde e vitalidade no trabalho!</p>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section class="about-section">
+      <div class="about-image">
+        <img
+          src="{{ url_for('static', filename='img/meio.svg')}}"
+          alt="Doctor"
+        />
+      </div>
+      <div class="about-text">
+        <h3>Sobre nós</h3>
+        <h1>Conheça <span>nossa história</span></h1>
+        <p>
+          Na clínica Shalom Medicina Ocupacional, nossa missão é elevar o padrão
+          de cuidados com sua saúde e bem-estar no ambiente de trabalho. Com uma
+          equipe altamente qualificada e especializada, estamos comprometidos em
+          oferecer serviços que vão além das expectativas. Nosso compromisso com
+          a excelência é respaldado por anos de experiência, durante os quais
+          refinamos nossas práticas e aprimoramos nossos serviços para atender
+          às necessidades em constante evolução de nossos clientes.
+        </p>
+      </div>
+    </section>
+
+    <!-- Serviços -->
+    <section class="services-section">
+      <div class="services-image">
+        <i class="fa-solid fa-file-waveform"></i>
+      </div>
+      <div class="services-content">
+        <h3>Nossos <span>Serviços</span></h3>
+        <p>
+          Nossos profissionais altamente qualificados estão prontos para
+          atendê-lo em suas necessidades de saúde pessoal ou empresarial.
+        </p>
+        <div class="services-list">
+          <ul>
+            <li>Raio-X</li>
+            <li>Espirometria</li>
+            <li>Audiometria</li>
+            <li>ECG</li>
+            <li>EEG</li>
+            <li>Holter</li>
+            <li>MAPA</li>
+            <li>Exames Específicos</li>
+          </ul>
+          <ul>
+            <li>Acuidade visual</li>
+            <li>Exames de sangue diversos</li>
+            <li>
+              Medicina do trabalho (admissional, demissional, periódico, retorno
+              ao trabalho)
+            </li>
+            <li>Teste de audiometria tonal e vocal</li>
+            <li>Teste de visão de cores</li>
+            <li>Entre outros...</li>
+          </ul>
+        </div>
+        <button class="cta-button">Agendar exame</button>
+      </div>
+    </section>
+
+    <!-- Agendamento -->
+    <section class="agendamento-container">
+      <div class="sub-agenda">
+        <div class="info-agenda">
+          <h1>Agende seu <span>Exame!</span></h1>
+          <p>
+            Nossos especialistas qualificados e dedicados estão prontos para
+            fornecer o mais alto padrão de cuidado e precisão e, sua avaliação
+            de saúde ocupacional. Com uma ampla gama de exames disponíveis,
+            nossa clínica de medicina ocupacional se compromete a garantir que
+            você estej em conformidade com as regulamentações vigentes e que sua
+            saúde seja cuidadosamente monitorada.
+          </p>
+          <button>Entrar em Contato</button>
+        </div>
+        <div class="info-image">
+          <img
+            src="{{ url_for('static', filename='img/fim.svg')}}"
+            alt="atendimento"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- <section>
+    <form class="formulario" method="post" action="enviaDados">
+        <h2 class="titulo">Formulário de Contato</h2>
+
+        <label class="label">
+            <input type="text" class="input-bordas" placeholder="Nome" required="">
+            <span class="focus-border"> <i></i> </span>
+        </label>
+
+        <label class="label">
+            <input type="text" class="input-bordas" placeholder="E-mail" required="">
+            <span class="focus-border"> <i></i> </span>
+        </label>
+
+        <label class="label">
+            <input type="text" class="input-bordas" placeholder="Assunto" required="">
+            <span class="focus-border"> <i></i> </span>
+        </label>
+
+        <label class="naoexibir">
+            <span>Não preencher:</span><br>
+            <input type="text" name="url" value=""></p>
+        </label>
+
+        <label class="label">
+            <textarea type="text" class="input-bordas textarea" rows="4" placeholder="Assunto" required=""></textarea>
+            <span class="focus-border"> <i></i> </span>
+        </label>
+
+        <button class="button-form borda-inversa"> Enviar</button>
+    </form>
+
+</section> -->
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="content-center">
+          <div class="text-center">
+            <div class="footer-logo">
+              <a href="#">Shalom<span>Group</span></a>
+            </div>
+            <ul class="list-nav">
+              <li><a href="#">Home</a></li>
+              <li><a href="#">About</a></li>
+              <li><a href="#">Services</a></li>
+              <li><a href="#">Contact</a></li>
+            </ul>
+            <div class="social">
+              <h3></h3>
+              <ul class="list-social">
+                <li class="in">
+                  <a href="#"><i class="fab fa-instagram"></i></a>
+                </li>
+                <li class="fb">
+                  <a href="#"><i class="fab fa-facebook-f"></i></a>
+                </li>
+                <li class="tw">
+                  <a href="#"><i class="fab fa-twitter"></i></a>
+                </li>
+                <li class="pin">
+                  <a href="#"><i class="fab fa-pinterest"></i></a>
+                </li>
+                <li class="dr">
+                  <a href="#"><i class="fab fa-dribbble"></i></a>
+                </li>
+              </ul>
+            </div>
+            <div class="copyright">
+              <p>© ShalomGroup. All Rights Reserved.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login - Reconhecimento Facial</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='styles.css') }}"
+    />
+    <script defer src="{{ url_for('static', filename='login.js') }}"></script>
+  </head>
+  <body>
+    <header>
+      <div class="logo">Tech<span class="span01">no</span></div>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="#">Pages</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="icons">
+        <a href="{{ url_for('register_page') }}" class="btn-registrar"
+          >Registrar</a
+        >
+      </div>
+      <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
+    </header>
+    <main>
+      <div class="login-container">
+        <h2>Login</h2>
+        <form id="loginForm" method="POST" action="/login">
+          <div class="input-field">
+            <label for="username">Usuário</label>
+            <input type="text" id="username" name="username" required />
+          </div>
+          <div class="input-field">
+            <label for="password">Senha</label>
+            <input type="password" id="password" name="password" required />
+          </div>
+          <button type="submit" class="btn-login">Entrar</button>
+        </form>
+      </div>
+    </main>
+  </body>
+</html>
